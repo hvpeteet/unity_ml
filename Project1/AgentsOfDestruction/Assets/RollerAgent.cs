@@ -74,7 +74,7 @@ public class RollerAgent : Agent {
         }
 
         // Time penalty
-        AddReward(-0.05f);
+        AddReward(-0.075f);
 
         // Fell off platform
         if (this.transform.position.y < -1.0)

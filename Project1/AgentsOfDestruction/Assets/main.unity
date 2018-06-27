@@ -113,7 +113,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &164127048
+--- !u!114 &108066938
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -121,26 +121,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e9bda8f3cf1492fa74926a530f6f70, type: 3}
-  m_Name: (Clone)
+  m_Script: {fileID: 11500000, guid: 35813a1be64e144f887d7d5f15b963fa, type: 3}
+  m_Name: (Clone)(Clone)
   m_EditorClassIdentifier: 
-  broadcast: 1
-  keyContinuousPlayerActions:
-  - key: 100
-    index: 0
-    value: 1
-  - key: 97
-    index: 0
-    value: -1
-  - key: 119
-    index: 1
-    value: 1
-  - key: 115
-    index: 1
-    value: -1
-  axisContinuousPlayerActions: []
-  discretePlayerActions: []
-  defaultAction: 0
   brain: {fileID: 182391605}
 --- !u!1 &182391603
 GameObject:
@@ -152,7 +135,7 @@ GameObject:
   - component: {fileID: 182391604}
   - component: {fileID: 182391605}
   m_Layer: 0
-  m_Name: Brain
+  m_Name: RollerBrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,11 +177,11 @@ MonoBehaviour:
     vectorObservationSpaceType: 1
   brainType: 3
   CoreBrains:
-  - {fileID: 164127048}
-  - {fileID: 1069743083}
-  - {fileID: 1687468957}
-  - {fileID: 1414347201}
-  instanceID: -24090
+  - {fileID: 931110460}
+  - {fileID: 1926029596}
+  - {fileID: 108066938}
+  - {fileID: 1776307151}
+  instanceID: 11664
 --- !u!1 &187794356
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +331,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &1069743083
+--- !u!114 &931110460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -356,11 +339,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 943466ab374444748a364f9d6c3e2fe2, type: 3}
-  m_Name: (Clone)
+  m_Script: {fileID: 11500000, guid: 41e9bda8f3cf1492fa74926a530f6f70, type: 3}
+  m_Name: (Clone)(Clone)
   m_EditorClassIdentifier: 
   broadcast: 1
-  brain: {fileID: 0}
+  keyContinuousPlayerActions:
+  - key: 100
+    index: 0
+    value: 1
+  - key: 97
+    index: 0
+    value: -1
+  - key: 119
+    index: 1
+    value: 1
+  - key: 115
+    index: 1
+    value: -1
+  axisContinuousPlayerActions: []
+  discretePlayerActions: []
+  defaultAction: 0
+  brain: {fileID: 182391605}
 --- !u!1 &1160528549
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,29 +446,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1414347201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
-  m_Name: (Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  graphModel: {fileID: 4900000, guid: 2630bad17089c5746aad4017527e70a2, type: 3}
-  graphScope: 
-  graphPlaceholders: []
-  BatchSizePlaceholderName: batch_size
-  VectorObservationPlacholderName: vector_observation
-  RecurrentInPlaceholderName: recurrent_in
-  RecurrentOutPlaceholderName: recurrent_out
-  VisualObservationPlaceholderName: []
-  ActionPlaceholderName: action
-  PreviousActionPlaceholderName: prev_action
-  brain: {fileID: 182391605}
 --- !u!1 &1543115255
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +623,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1687468957
+--- !u!114 &1776307151
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -655,9 +631,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35813a1be64e144f887d7d5f15b963fa, type: 3}
-  m_Name: (Clone)
+  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
+  m_Name: (Clone)(Clone)
   m_EditorClassIdentifier: 
+  broadcast: 1
+  graphModel: {fileID: 4900000, guid: 351c7c52783545249965a7a7bd674678, type: 3}
+  graphScope: 
+  graphPlaceholders: []
+  BatchSizePlaceholderName: batch_size
+  VectorObservationPlacholderName: vector_observation
+  RecurrentInPlaceholderName: recurrent_in
+  RecurrentOutPlaceholderName: recurrent_out
+  VisualObservationPlaceholderName: []
+  ActionPlaceholderName: action
+  PreviousActionPlaceholderName: prev_action
   brain: {fileID: 182391605}
 --- !u!1 &1852421645
 GameObject:
@@ -740,3 +727,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1926029596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943466ab374444748a364f9d6c3e2fe2, type: 3}
+  m_Name: (Clone)(Clone)
+  m_EditorClassIdentifier: 
+  broadcast: 1
+  brain: {fileID: 0}
